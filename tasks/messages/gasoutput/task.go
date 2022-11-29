@@ -147,6 +147,7 @@ func (t *Task) ProcessTipSets(ctx context.Context, current *types.TipSet, execut
 				GasBurned:          gasOutputs.GasBurned,
 				ActorName:          actorName,
 				ActorFamily:        builtin.ActorFamily(actorName),
+				ExecutedBlock:      blk.Cid().String(),
 			}
 			gasOutputsResults = append(gasOutputsResults, gasOutput)
 		}
